@@ -12,9 +12,8 @@ btnAgregar.addEventListener("click",() => {
      
 
     if(validateString(nombre)&&validateString(apellido) && opcion !="0"){
-        if (isNaN(parseFloat(promedio)) && (validateAvarage(promedio))){
-            console.log("validado");
- 
+        if (!isNaN(parseFloat(promedio)) && (validateAvarage(promedio))){
+            agregarEstudiante(nombre, apellido, promedio);
         }else{
             console.log("Error promedio");
         }
